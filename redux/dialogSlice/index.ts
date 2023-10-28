@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 type InitialStateType = {
   siteMap: boolean;
@@ -12,7 +12,7 @@ const dialogSlice = createSlice({
   name: "dialogSlice",
   initialState,
   reducers: {
-    setSiteMap(state) {
+    setSiteMap(state, action: PayloadAction<boolean | undefined>) {
       state.siteMap = !state.siteMap;
     },
   },

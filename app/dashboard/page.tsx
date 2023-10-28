@@ -2,15 +2,15 @@ import AboutScreen from "@/components/screens/about";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "Dashboard",
   description:
-    "Software Engineer - You may find bunch of information about myself.",
+    "Software Engineer - you may see statistics of my channels, github, and others...",
   alternates: {
-    canonical: `/about`,
+    canonical: `/dashboard`,
   },
 };
 
-export default function About() {
+export default function Dashboard() {
   return (
     <>
       <main className="w-full h-[100vh]">

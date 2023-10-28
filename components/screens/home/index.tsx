@@ -1,6 +1,7 @@
 import { FC, useEffect, useState } from "react";
 import BackgroundCell from "./bg-cell";
 import { motion, Variants } from "framer-motion";
+import Link from "next/link";
 import TextSpan from "./anim";
 
 const Home: FC = () => {
@@ -85,7 +86,9 @@ const Home: FC = () => {
           Abduvoitov.
         </div>
         <div className="flex gap-[50px] max-[1300px]:gap-[30px] max-[1000px]:hidden">
-          <div className="cursor-none font-semibold text-black">About</div>
+          <div className="cursor-none font-semibold text-black">
+            <Link href="/about">About</Link>
+          </div>
           <div className="cursor-none font-semibold text-black">Blog</div>
           <div className="cursor-none font-semibold text-black">Dashboard</div>
           <div className="cursor-none font-semibold text-black">Résumé</div>
