@@ -1,3 +1,4 @@
+"use client";
 import { FC } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -7,16 +8,13 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import Link from "next/link";
-// import { useReduxDispatch, useReduxSelector } from "@/hooks/useRedux";
-// import { setSiteMap } from "@/redux/dialogSlice";
+import { useModals } from "@/zustand";
 
 const SiteMap: FC = () => {
-  // const { siteMap } = useReduxSelector((state) => state.dialog);
-  // const dispatch = useReduxDispatch();
+  const { siteMap, setSiteMap } = useModals();
+
   return (
-    <Dialog
-    // open={siteMap} onOpenChange={() => dispatch(setSiteMap())}
-    >
+    <Dialog open={siteMap} onOpenChange={(open) => setSiteMap(open)}>
       <DialogContent className="sm:max-w-md">
         <DialogHeader>
           <DialogTitle>Site Map</DialogTitle>
@@ -29,7 +27,7 @@ const SiteMap: FC = () => {
         </Button>
         <Button variant={"outline"}>Blog</Button>
         <Button variant={"outline"}>Dasboard</Button>
-        <Button variant={"outline"}>Resume</Button>
+        <Button variant={"outline"}>Résumé</Button>
       </DialogContent>
     </Dialog>
   );

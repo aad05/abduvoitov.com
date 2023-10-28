@@ -1,14 +1,14 @@
+"use client";
 import { FC } from "react";
 import Link from "next/link";
 import { Button } from "../ui/button";
 import { ModeToggle } from "../ui/modetoggle";
 import { Menu } from "lucide-react";
 import SiteMap from "./site-map";
-// import { useReduxDispatch } from "@/hooks/useRedux";
-// import { setSiteMap } from "@/redux/dialogSlice";
+import { useModals } from "@/zustand";
 
 const Navbar: FC = () => {
-  // const dispatch = useReduxDispatch();
+  const { setSiteMap } = useModals();
   return (
     <>
       <SiteMap />
@@ -37,7 +37,10 @@ const Navbar: FC = () => {
             </Button>
           </div>
           <Button
-            // onClick={() => dispatch(setSiteMap())}
+            onClick={() => {
+              setSiteMap(true);
+              console.log("Log");
+            }}
             variant="outline"
             size="icon"
             className="hidden max-[650px]:flex"

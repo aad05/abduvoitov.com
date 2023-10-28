@@ -89,9 +89,15 @@ const Home: FC = () => {
           <div className="cursor-none font-semibold text-black">
             <Link href="/about">About</Link>
           </div>
-          <div className="cursor-none font-semibold text-black">Blog</div>
-          <div className="cursor-none font-semibold text-black">Dashboard</div>
-          <div className="cursor-none font-semibold text-black">Résumé</div>
+          <div className="cursor-none font-semibold text-black">
+            <Link href="/blog">Blog</Link>
+          </div>
+          <div className="cursor-none font-semibold text-black">
+            <Link href="/dashboard">Dashboard</Link>
+          </div>
+          <div className="cursor-none font-semibold text-black">
+            <Link href="/resume">Résumé</Link>
+          </div>
         </div>
       </div>
       <div className="w-full h-[60%] flex items-center justify-center">
