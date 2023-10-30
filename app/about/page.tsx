@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About - Abduvoitov Asadbek",
     description:
-      "Software Engineer - You may find bunch of information about myself.",
+      "Software Engineer - You may find bunch of information about me.",
     url: "https://abduvoitov.vercel.app/api/og?text='About - Abduvoitov Asadbek'",
     siteName: "abduvoitov.com/about",
     images: [
