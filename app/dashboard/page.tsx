@@ -34,7 +34,7 @@ export const metadata: Metadata = {
 };
 
 async function getRepo() {
-  const res = await fetch(`http://localhost:3000/api/dashboard/`);
+  const res = await fetch(`/api/dashboard`);
   const data = await res.json();
 
   return data;
