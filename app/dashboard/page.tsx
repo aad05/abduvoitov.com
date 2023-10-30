@@ -1,3 +1,4 @@
+import { DashboardMatricType } from "@/@types";
 import DashboardScreen from "@/components/screens/dashboard";
 import { Metadata } from "next";
 
@@ -32,11 +33,20 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Dashboard() {
+export async function getRepo() {
+  const res = await fetch(`http://localhost:3000/api/dashboard/`);
+  const data = await res.json();
+
+  return data;
+}
+
+export default async function Dashboard() {
+  const data: DashboardMatricType = await getRepo();
+
   return (
     <>
       <main className="w-full h-[100vh]">
-        <DashboardScreen />
+        <DashboardScreen {...data} />
       </main>
     </>
   );
