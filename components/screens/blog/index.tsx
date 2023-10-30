@@ -1,6 +1,5 @@
 import Navbar from "@/components/navbar";
 import { Input } from "@/components/ui/input";
-import PageTitle from "@/customs/page-title";
 import { Search } from "lucide-react";
 import { FC } from "react";
 
@@ -9,7 +8,7 @@ const Blog: FC = () => {
     <>
       <Navbar />
       <div className="w-[700px] m-auto p-5 max-[800px]:w-full max-[800px]:py-5 max-[800px]:px-10">
-        <PageTitle>Blog</PageTitle>
+        <h1 className="text-5xl font-black">Blog</h1>
         <p className="font-sans font-medium leading-7 mt-8">
           I write mostly about web development, languages, tech careers and
           personal growth. In total, {"I've"} written 1 articles on this site.

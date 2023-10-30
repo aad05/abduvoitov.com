@@ -15,7 +15,6 @@ const telegramData = async () => {
 export async function GET(req: NextRequest) {
   const github = await githubData();
   const telegram = await telegramData();
-  console.log(telegram);
 
   return NextResponse.json({
     github: github.followers,

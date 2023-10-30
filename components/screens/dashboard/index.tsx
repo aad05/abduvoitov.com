@@ -1,5 +1,4 @@
 import Navbar from "@/components/navbar";
-import PageTitle from "@/customs/page-title";
 import { FC } from "react";
 import { Card, CardHeader } from "@/components/ui/card";
 import { ArrowUpRightSquare } from "lucide-react";
@@ -14,7 +13,7 @@ const Dashboard: FC<DashboardMatricType> = (props) => {
     <>
       <Navbar />
       <div className="w-[700px] m-auto p-5 max-[800px]:w-full max-[800px]:py-5 max-[800px]:px-10">
-        <PageTitle>Dashboard</PageTitle>
+        <h1 className="text-5xl font-black">Dashboard</h1>
         <div className="mt-8 grid grid-cols-2 gap-4 max-sm:grid-cols-1">
           <Card>
             <CardHeader>
