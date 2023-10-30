@@ -2,14 +2,16 @@
   "name": "abduvoitov.com",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://docs.scribblify.me",
   "scripts": {
     "dev": "next dev --turbo",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "lint": "next lint",
     "prepare": "husky install"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^14.0.0",
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-dropdown-menu": "^2.0.6",
     "@radix-ui/react-slot": "^1.0.2",

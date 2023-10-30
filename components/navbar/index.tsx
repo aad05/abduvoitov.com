@@ -12,7 +12,7 @@ const Navbar: FC = () => {
   return (
     <>
       <SiteMap />
-      <div className="w-[700px] h-full m-auto p-5 max-[800px]:w-full max-[800px]:py-5 max-[800px]:px-10">
+      <div className="w-[700px] m-auto py-5 max-[800px]:w-full max-[800px]:py-5 max-[800px]:px-10">
         <div className="flex justify-between">
           <div className="flex gap-3 max-[650px]:hidden">
             <Button variant={"link"}>

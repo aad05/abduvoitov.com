@@ -1,4 +1,4 @@
-import AboutScreen from "@/components/screens/about";
+import ResumeScreen from "@/components/screens/resume";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -36,7 +36,7 @@ export default function Resume() {
   return (
     <>
       <main className="w-full h-[100vh]">
-        <AboutScreen />
+        <ResumeScreen />
       </main>
     </>
   );

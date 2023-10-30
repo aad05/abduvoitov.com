@@ -1,4 +1,4 @@
-import AboutScreen from "@/components/screens/about";
+import BlogScreen from "@/components/screens/blog";
 import { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -37,7 +37,7 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function Blog() {
   return (
     <main className="w-full h-[100vh]">
-      <AboutScreen />
+      <BlogScreen />
     </main>
   );
 }

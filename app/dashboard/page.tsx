@@ -1,4 +1,4 @@
-import AboutScreen from "@/components/screens/about";
+import DashboardScreen from "@/components/screens/dashboard";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -36,7 +36,7 @@ export default function Dashboard() {
   return (
     <>
       <main className="w-full h-[100vh]">
-        <AboutScreen />
+        <DashboardScreen />
       </main>
     </>
   );

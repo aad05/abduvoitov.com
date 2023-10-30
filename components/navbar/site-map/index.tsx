@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/dialog";
 import Link from "next/link";
 import { useModals } from "@/zustand";
+import { sitemap } from "@/lib/routing";
 
 const SiteMap: FC = () => {
   const { siteMap, setSiteMap } = useModals();
@@ -19,15 +20,17 @@ const SiteMap: FC = () => {
         <DialogHeader>
           <DialogTitle>Site Map</DialogTitle>
         </DialogHeader>
-        <Button variant={"outline"}>
-          <Link href={"/"}>Home</Link>
-        </Button>
-        <Button variant={"outline"}>
-          <Link href={"/about"}>About</Link>
-        </Button>
-        <Button variant={"outline"}>Blog</Button>
-        <Button variant={"outline"}>Dasboard</Button>
-        <Button variant={"outline"}>Résumé</Button>
+        {sitemap.map(({ id, title, path }) => (
+          <Link key={id} href={path} className="w-full">
+            <Button
+              onClick={() => setSiteMap(false)}
+              variant={"outline"}
+              className="w-full"
+            >
+              {title}
+            </Button>
+          </Link>
+        ))}
       </DialogContent>
     </Dialog>
   );

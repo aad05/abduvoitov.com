@@ -3,8 +3,13 @@ import BackgroundCell from "./bg-cell";
 import { motion, Variants } from "framer-motion";
 import Link from "next/link";
 import TextSpan from "./anim";
+import SiteMap from "@/components/navbar/site-map";
+import { Menu } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useModals } from "@/zustand";
 
 const Home: FC = () => {
+  const { setSiteMap } = useModals();
   const letters = "Abcdefghijklmnopqrstuvwxyz";
   const [cursorVariant, setCursorVariant] = useState("default");
   const [mousePosition, setMousePosition] = useState({
@@ -68,6 +73,7 @@ const Home: FC = () => {
 
   return (
     <div className="w-full h-[100vh] relative overflow-hidden">
+      <SiteMap />
       <motion.div
         className="cursor"
         variants={variants}
@@ -99,6 +105,17 @@ const Home: FC = () => {
             <Link href="/resume">Résumé</Link>
           </div>
         </div>
+        <Button
+          className="hidden max-[1000px]:flex"
+          onClick={() => setSiteMap(true)}
+          variant="outline"
+          size="icon"
+        >
+          <Menu className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+          {/* Light */}
+          <Menu className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+          <span className="sr-only">Humburger menu</span>
+        </Button>
       </div>
       <div className="w-full h-[60%] flex items-center justify-center">
         <div className="text-black">
