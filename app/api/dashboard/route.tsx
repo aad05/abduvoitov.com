@@ -12,7 +12,7 @@ const telegramData = async () => {
   return await res.json();
 };
 
-export async function GET(req: NextRequest) {
+export async function GET() {
   const github = await githubData();
   const telegram = await telegramData();
 

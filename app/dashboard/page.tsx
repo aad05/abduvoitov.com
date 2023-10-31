@@ -33,15 +33,16 @@ export const metadata: Metadata = {
   },
 };
 
-async function getRepo() {
-  const res = await fetch(`/api/dashboard`);
+async function fetcher() {
+  const fileInfo = await import("../api/dashboard/route");
+  const res = await fileInfo.GET();
   const data = await res.json();
 
   return data;
 }
 
 export default async function Dashboard() {
-  const data: DashboardMatricType = await getRepo();
+  const data: DashboardMatricType = await fetcher();
 
   return (
     <>
