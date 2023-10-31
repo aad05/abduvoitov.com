@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description:
       "Software Engineer - you may see statistics of my channels, github, and others...",
     url: "https://abduvoitov.vercel.app/api/og?text='Dashboard - Abduvoitov Asadbek'",
-    siteName: "abduvoitov.com/dashboard",
+    siteName: "https://abduvoitov.com/dashboard",
     images: [
       {
         url: "https://abduvoitov.vercel.app/api/og?text='Dashboard - Abduvoitov Asadbek'&width=800&height=600",

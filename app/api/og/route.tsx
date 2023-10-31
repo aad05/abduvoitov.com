@@ -8,7 +8,7 @@ export async function GET(request: NextRequest) {
     String(request.nextUrl.searchParams.get("text")).replaceAll("'", "") ??
     "Something went wrong!";
   const width = Number(request.nextUrl.searchParams.get("width") ?? 1200);
-  const height = Number(request.nextUrl.searchParams.get("height") ?? 430);
+  const height = Number(request.nextUrl.searchParams.get("height") ?? 330);
 
   return new ImageResponse(
     (

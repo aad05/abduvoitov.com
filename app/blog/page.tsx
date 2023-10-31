@@ -14,7 +14,7 @@ export async function generateMetadata(): Promise<Metadata> {
       description:
         "Software Engineer - Exceptional writing and proofreading skills with the ability to create compelling content across a range of industries and topics.",
       url: "https://abduvoitov.vercel.app/api/og?text='Blog - Abduvoitov Asadbek'",
-      siteName: "abduvoitov.com/blog",
+      siteName: "https://abduvoitov.com/blog",
       images: [
         {
           url: "https://abduvoitov.vercel.app/api/og?text='Blog - Abduvoitov Asadbek'&width=800&height=600",

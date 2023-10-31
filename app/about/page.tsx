@@ -4,7 +4,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Software Engineer - You may find bunch of information about myself.",
+    "Software Engineer - You may find bunch of information about me.",
   alternates: {
     canonical: `/about`,
   },
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     description:
       "Software Engineer - You may find bunch of information about me.",
     url: "https://abduvoitov.vercel.app/api/og?text='About - Abduvoitov Asadbek'",
-    siteName: "abduvoitov.com/about",
+    siteName: "https://abduvoitov.com/about",
     images: [
       {
         url: "https://abduvoitov.vercel.app/api/og?text='About - Abduvoitov Asadbek'&width=800&height=600",
