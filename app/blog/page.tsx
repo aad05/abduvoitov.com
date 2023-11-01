@@ -1,4 +1,6 @@
+import { PostSlug } from "@/@types";
 import BlogScreen from "@/components/screens/blog";
+import { mdxReader } from "@/lib/mdx-reader";
 import { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -35,9 +37,11 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function Blog() {
+  const data: PostSlug[] = mdxReader();
+
   return (
     <main className="w-full h-[100vh]">
-      <BlogScreen />
+      <BlogScreen data={data} />
     </main>
   );
 }
