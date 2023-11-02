@@ -2,6 +2,8 @@ import type { FC } from "react";
 import { Separator } from "../ui/separator";
 import Link from "next/link";
 
+// Footer might be rebranching
+
 const Footer: FC = () => {
   return (
     <div className="mt-8">
