@@ -30,7 +30,8 @@ export const getPost = ({ slug }: { slug: string }) => {
   const { data: fontMatter, content } = matter(markdownFile);
 
   return {
-    fontMatter: { ...fontMatter, reading_time: readingTime(markdownFile) },
+    fontMatter: { ...fontMatter },
+    reading_time: readingTime(markdownFile),
     slug,
     content,
   };

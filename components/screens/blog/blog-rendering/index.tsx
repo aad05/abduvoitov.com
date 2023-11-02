@@ -4,12 +4,14 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { FC } from "react";
 import Avatar from "./avatar";
 import Footer from "@/components/footer";
+import { ReadTimeResults } from "reading-time";
 
 const BlogRendering: FC<{
   post: {
     fontMatter: {
-      [key: string]: any;
+      [x: string]: any;
     };
+    reading_time: ReadTimeResults;
     slug: string;
     content: string;
   };
@@ -21,6 +23,7 @@ const BlogRendering: FC<{
         <h1 className="text-5xl font-black">{post.fontMatter.title}</h1>
         <Avatar post={post} />
         <div className="mt-8">
+          {/* @ts-expect-error Async Server Component */}
           <MDXRemote source={post.content}></MDXRemote>
         </div>
         <Footer />

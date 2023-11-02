@@ -1,11 +1,13 @@
 import Image from "next/image";
 import type { FC } from "react";
+import { ReadTimeResults } from "reading-time";
 
 const Avatar: FC<{
   post: {
     fontMatter: {
-      [key: string]: any;
+      [x: string]: any;
     };
+    reading_time: ReadTimeResults;
     slug: string;
     content: string;
   };
@@ -26,7 +28,7 @@ const Avatar: FC<{
       </div>
       <div>
         <p className="font-sans text-xs">
-          {post.fontMatter.reading_time.text} • 12 views
+          {post?.reading_time?.text} • 12 views
         </p>
       </div>{" "}
     </div>
