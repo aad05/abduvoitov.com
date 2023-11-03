@@ -23,7 +23,6 @@ const BlogRendering: FC<{
         <h1 className="text-5xl font-black">{post.fontMatter.title}</h1>
         <Avatar post={post} />
         <div className="mt-8">
-          {/* @ts-expect-error Async Server Component */}
           <MDXRemote source={post.content}></MDXRemote>
         </div>
         <Footer />
