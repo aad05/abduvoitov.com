@@ -1,8 +1,9 @@
 import Image from "next/image";
 import type { FC } from "react";
 import { ReadTimeResults } from "reading-time";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
-const Avatar: FC<{
+const AvatarConfig: FC<{
   post: {
     fontMatter: {
       [x: string]: any;
@@ -15,13 +16,10 @@ const Avatar: FC<{
   return (
     <div className="px-4 mt-12 flex justify-between items-center max-sm:flex-col max-sm:items-start gap-2">
       <div className="flex gap-2 items-center">
-        <Image
-          width={40}
-          height={40}
-          alt="logo"
-          loading="eager"
-          src="https://firebasestorage.googleapis.com/v0/b/aema-image-upload.appspot.com/o/image%2Flogo.png?alt=media&token=28a8445b-54bb-401b-8914-4d91c6b1649b"
-        />
+        <Avatar>
+          <AvatarImage src="https://firebasestorage.googleapis.com/v0/b/aema-image-upload.appspot.com/o/image%2Flogo.png?alt=media&token=28a8445b-54bb-401b-8914-4d91c6b1649b" />
+          <AvatarFallback>AA</AvatarFallback>
+        </Avatar>
         <p className="font-sans font-medium">
           Abduvoitov Asadbek / {post.fontMatter.date}
         </p>
@@ -35,4 +33,4 @@ const Avatar: FC<{
   );
 };
 
-export default Avatar;
+export default AvatarConfig;
